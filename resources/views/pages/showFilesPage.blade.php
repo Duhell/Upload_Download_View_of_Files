@@ -3,7 +3,10 @@
 @section('content')
     <div class="font-['Poppins'] flex justify-center items-center w-100 h-[100vh] bg-slate-900">
         <div class="relative overflow-x-auto">
-            <p class="font-semibold text-slate-400 text-[1.5rem]">Total: 30 Files</p>
+            <div class="flex justify-between items-center">
+                <p class="font-semibold text-slate-400 text-[1.5rem]">Total: 30 Files</p>
+                <a href="/" class="py-2 px-4 text-[.6rem] bg-red-500 hover:bg-red-700 rounded" >Back</a>
+            </div>
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
