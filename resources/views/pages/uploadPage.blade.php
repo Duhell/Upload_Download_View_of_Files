@@ -2,9 +2,12 @@
 @section('title','Upload File')
 @section('content')
     <div class="font-['Poppins'] flex justify-center items-center w-100 h-[100vh] bg-slate-900">
-        <form action="" method="post" class="bg-white rounded p-6 flex flex-col justify-center">
-            <h1 class="text-center font-bold text-[20px] ">UPLOAD A FILE</h1>
+        <form action="upload" method="post" enctype="multipart/form-data" class="bg-white rounded p-6 flex flex-col justify-center">
             @csrf
+            <h1 class="text-center font-bold text-[20px] ">UPLOAD A FILE</h1>
+            @if (session()->has('response'))
+                <p class="text-center font-semibold text-[16px] ">{{ session()->get('response') }}</p>
+            @endif
             <div class="flex flex-col mb-2">
                 <label>Name</label>
                 <input class="border p-2" type="text" name="nameOfFile" placeholder="Name of the File">
@@ -12,7 +15,7 @@
 
             <div class="flex flex-col my-3">
                 <label>Description</label>
-                <input class="border p-2 type="text" name="descriptionOfFile" placeholder="Add description">
+                <input class="border p-2" type="text" name="descriptionOfFile" placeholder="Add description">
             </div>
 
             <div class="flex flex-col">
